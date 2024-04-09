@@ -17,7 +17,7 @@ const quotes = [
     { text: "You are not alone. You are seen. I am with you. You are not alone.", author: "Shonda Rhimes" },
     { text: "No one heals himself by wounding another.", author: "St Ambrose" },
     { text: "Stand out. Be different. Be a light.", author: "President Russel M Nelson" },
-    { text: "This is not a men vs women issue. It's about people vs prejudice.", author: "" },
+    { text: "This is not a men versus women issue. It's about people vs prejudice.", author: "Laura Bates" },
     { text: "Comparison is the thief of joy.", author: "Teddy Roosevelt" },
     { text: "The journey of a thousand miles begins with one step.", author: " Lao Tzu" },
     { text: "It does not matter how slowly you go as long as you do not stop.", author: "Confucius" },                                                                                
