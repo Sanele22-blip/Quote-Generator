@@ -23,5 +23,33 @@ const quotes = [
     { text: "It does not matter how slowly you go as long as you do not stop.", author: "Confucius" },                                                                                
 ];
 
+let currentQuoteIndex = 0;
+        const quoteElement = document.getElementById('quote');
+        const authorElement = document.getElementById('author');
+        const nextButton = document.getElementById('nextButton');
+        const audioElement = document.getElementById('audio');
+
+        function displayQuote() {
+            const { text, author } = quotes[currentQuoteIndex];
+            quoteElement.textContent = `"${text}"`;
+            authorElement.textContent = author !== "" ? `- ${author}` : "";
+            speakQuote(text);
+        }
+
+        function speakQuote(text) {
+            window.speechSynthesis.cancel();
+            const utterance = new SpeechSynthesisUtterance(text);
+            window.speechSynthesis.speak(utterance);
+        }
+
+        function getNextQuote() {
+            currentQuoteIndex = (currentQuoteIndex + 1) % quotes.length;
+            displayQuote();
+        }
+
+        nextButton.addEventListener('click', getNextQuote);
+
+        displayQuote();
+   
 
 
